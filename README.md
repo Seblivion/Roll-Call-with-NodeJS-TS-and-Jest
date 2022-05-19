@@ -9,3 +9,7 @@ Task given by Nexer and Husqvarna in May 2022. Based on: https://open.kattis.com
 ## How to run
 * Compile to build js-files used to run the program (must always be done before testing new changes) - "npm run build"
 * Run all test files - "npm run test"
+
+## To do
+* Add more tests
+* Add client interface or API for user interaction
