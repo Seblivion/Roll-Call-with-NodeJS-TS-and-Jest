@@ -12,5 +12,6 @@ Task given by Nexer and Husqvarna in May 2022. Based on: https://open.kattis.com
 * Run index.ts to let the user try out some functionality of the class - "npm run start"
 
 ## To do
+* Error handling
 * Add more tests
 * Add client interface or API for user interaction
