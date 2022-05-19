@@ -22,7 +22,7 @@ export class CitizenListManager {
         this.arrayOfCitizens.forEach((citizen) => {
             result += citizen.toString() + ", ";
         });
-        // Remove the last comma before returning
+        // Remove space and the last comma before returning
         return result.substring(0, result.length - 2);
     }
 
@@ -33,6 +33,7 @@ export class CitizenListManager {
         If there are duplicates of a first name, then the last name is also provided
     */
     public rollCall(): string[] {
+        // Slice is used to create a copy
         let arrayOfSortedCitizens: ICitizen[] = this.sortByFirstName().slice();
         // To be returned as output
         let arrayOfResults: string[] = [];
@@ -61,7 +62,6 @@ export class CitizenListManager {
         for(let i = 0; i < arrayOfSortedCitizens.length; i++) {
             if(mapOfUniqueCitizenIds.has(arrayOfSortedCitizens[i].getId())) {
                 // Remove last name of uniquely named citizen
-                //arrayOfSortedCitizens[i].setLastName("");
                 arrayOfResults.push(arrayOfSortedCitizens[i].getFirstName());
             }
             else {
@@ -69,31 +69,24 @@ export class CitizenListManager {
             }
         }
 
-        // Insert results into array
-        /*arrayOfSortedCitizens.forEach((citizen) => {
-            if(citizen.getLastName() == "") {
-                arrayOfResults.push(citizen.getFirstName());
-            }
-            else {
-                arrayOfResults.push(citizen.getFirstName() + " " + citizen.getLastName());
-            }
-        });*/
         return arrayOfResults;
     } // end of rollCall
 
-    /* PRIVATE FUNCTIONS */
-
-    private sortByFirstAndLastName(): ICitizen[] {
+    /*
+        sortByFirstAndLastName
+        Sorts the list by both names with last name taking priority
+    */
+    public sortByFirstAndLastName(): ICitizen[] {
         this.sortByFirstName();
         this.sortByLastName();
         return this.arrayOfCitizens;
     }
 
-    private sortByFirstName(): ICitizen[] {
+    public sortByFirstName(): ICitizen[] {
         return this.arrayOfCitizens.sort((a, b) => a.getFirstName().localeCompare(b.getFirstName()));
     }
 
-    private sortByLastName(): ICitizen[] {
+    public sortByLastName(): ICitizen[] {
         return this.arrayOfCitizens.sort((a, b) => a.getLastName().localeCompare(b.getLastName()));
     }
 
