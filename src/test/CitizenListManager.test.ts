@@ -67,11 +67,19 @@ describe("This is testing ground for the citizen stack", () => {
     });
 
     it("Testing error on numbers in name", () => {
-        expect(() => { new Student(1, "X", " Æ A-12"); }).toThrow(Error);
+        expect(() => { new Student(1, "X", " ÆA-12"); }).toThrow(Error);
     });
 
     it("Testing error on empty name", () => {
         expect(() => { new Student(1, "", "Reaper"); }).toThrow(Error);
+    });
+
+    it("Testing error on lowercase start on name", () => {
+        expect(() => { new Student(1, "Gustav", "adolf"); }).toThrow(Error);
+    });
+
+    it("Testing error on uppercase after first character", () => {
+        expect(() => { new Student(1, "GRIM", "Reaper"); }).toThrow(Error);
     });
 
 });

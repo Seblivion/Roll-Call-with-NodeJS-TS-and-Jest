@@ -57,8 +57,12 @@ export class Student implements ICitizen {
 
     /* PRIVATE FUNCTIONS */
 
+    /*
+        Returns false if numbers of chars are more than 20 or less than 1, or if the name
+        is not formatted with an uppercase as starting char followed by lowercase chars.
+    */
     private isValidName(name: string): boolean {
-        if(/[^a-zA-Z]/.test(name) || name.length > 20 || name.length <= 0 ) {
+        if(name.length > 20 || name.length <= 0 || !/^[A-Z][a-z]*$/.test(name)) {
             return false;
         }
         return true;
