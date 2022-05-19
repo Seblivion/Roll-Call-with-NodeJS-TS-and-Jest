@@ -11,6 +11,7 @@ function main() {
     console.log("Add names to list by writing first AND last name, press enter, and keep adding names until you are done.");
     console.log("Names must consist of letters a-z, including capitals.");
     console.log("First and last name can't be more than 20 characters respectively.");
+    console.log("Names must be more than 0 characters.");
     console.log("Write 'done' when finished.");
     // Let user write input
     stdin.addListener("data", function(magicToBeTurnedIntoString) {

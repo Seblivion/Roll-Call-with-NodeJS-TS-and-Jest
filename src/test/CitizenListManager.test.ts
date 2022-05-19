@@ -1,8 +1,13 @@
 import {CitizenListManager} from "../classes/CitizenListManager";
 import {Student} from "../classes/Student";
 
+/*
+    Testing facility
+    Student and citizen list manager
+*/
 describe("This is testing ground for the citizen stack", () => {
 
+    /* **************************** These should work **************************** */
     it("Testing instantiation of citizen interface and student class and a get function", () => {
         const student = new Student(1, "Vlad", "Dracula");
         expect(student.getFirstName()).toBe("Vlad");
@@ -45,6 +50,28 @@ describe("This is testing ground for the citizen stack", () => {
     it("Testing the sorting by both names", () => {
         citizenListManager.sortByFirstAndLastName();
         expect(citizenListManager.listToString()).toBe("6: Peter Gunn, 4: Micky Mouse, 5: Minnie Mouse, 3: Peter Pan, 2: Agent Smith, 1: Will Smith");
+    });
+
+    /* **************************** ERRORS **************************** */
+    it("Testing error on swedish chars", () => {
+        try {
+            const student = new Student(1, "Harald", "Stenhård");
+        }
+        catch (e) {
+            expect(e).toBeInstanceOf(Error);
+        }
+    });
+
+    it("Testing error on name over 20 chars", () => {
+        expect(() => { new Student(1, "Hubert", "Wolfeschlegelsteinhausenbergerdorff"); }).toThrow(Error);
+    });
+
+    it("Testing error on numbers in name", () => {
+        expect(() => { new Student(1, "X", " Æ A-12"); }).toThrow(Error);
+    });
+
+    it("Testing error on empty name", () => {
+        expect(() => { new Student(1, "", "Reaper"); }).toThrow(Error);
     });
 
 });
