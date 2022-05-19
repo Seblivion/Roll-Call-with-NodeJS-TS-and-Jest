@@ -1,14 +1,17 @@
 import {ICitizen} from "../interfaces/ICitizen.js";
 
 export class CitizenListManager {
+
     /* VARIABLES */
+
     // The variable making up the list content
     private arrayOfCitizens: ICitizen[];
 
-    /* FUNCTIONS */
+    /* PUBLIC FUNCTIONS */
+    
     constructor(arrayOfCitizens: ICitizen[] = []) {
         if(arrayOfCitizens.length == 0) {
-            console.log("Warning: There were no people added to the list.");
+            console.log("CitizenListManager: Warning: There were no people added to the list.");
         }
         this.arrayOfCitizens = arrayOfCitizens;
     }
