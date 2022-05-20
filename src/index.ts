@@ -11,17 +11,28 @@ function main() {
     console.log("First and last name can't be more than 20 characters respectively.");
     console.log("Names must be more than 0 characters.");
     console.log("Write 'done' when finished.");
+    console.log("Write 'clear' to clear the list from names.");
+    console.log("Write 'quit' to exit the program.");
+    console.log("");
     // Let user write input
     stdin.addListener("data", function(magicToBeTurnedIntoString) {
         if(magicToBeTurnedIntoString.toString().trim() == "done") {
             // Results
             let citizenListManager = new CitizenListManager(arrayOfStudents);
             let rollCallList: string[] = citizenListManager.rollCall();
-            console.log("Roll call list:");
+            console.log("");
+            console.log("*********** Roll call list: ***********");
             rollCallList.forEach((name) => {
                 console.log(name);
             });
+            console.log("");
+        }
+        else if (magicToBeTurnedIntoString.toString().trim() == "quit") {
             process.exit(1);
+        }
+        else if (magicToBeTurnedIntoString.toString().trim() == "clear") {
+            arrayOfStudents = [];
+            console.log("");
         }
         else {
             if(numberOfInputs > 200) {

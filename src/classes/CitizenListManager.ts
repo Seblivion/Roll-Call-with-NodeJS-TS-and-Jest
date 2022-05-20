@@ -93,4 +93,8 @@ export class CitizenListManager {
         return this.arrayOfCitizens.sort((a, b) => a.getLastName().localeCompare(b.getLastName()));
     }
 
+    public clear(): void {
+        this.arrayOfCitizens = [];
+    }
+
 }

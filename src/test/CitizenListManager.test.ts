@@ -46,4 +46,9 @@ describe("This is testing ground for the citizen stack", () => {
         expect(citizenListManager.listToString()).toBe("6: Peter Gunn, 4: Micky Mouse, 5: Minnie Mouse, 3: Peter Pan, 2: Agent Smith, 1: Will Smith");
     });
 
+    it("Testing list clearing", () => {
+        citizenListManager.clear();
+        expect(citizenListManager.listToString()).toBe("");
+    });
+
 });
