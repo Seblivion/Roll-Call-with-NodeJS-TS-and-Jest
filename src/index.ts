@@ -3,7 +3,7 @@ import {Student} from "./classes/Student";
 
 function main() {
     let stdin = process.openStdin();
-    let numberOfInputs: number = 0;
+    let numberOfNamesInserted: number = 0;
     let arrayOfStudents: Student[] = [];
 
     console.log("Add names to list by writing first AND last name, press enter, and keep adding names until you are done.");
@@ -32,10 +32,11 @@ function main() {
         }
         else if (magicToBeTurnedIntoString.toString().trim() == "clear") {
             arrayOfStudents = [];
+            numberOfNamesInserted = 0;
             console.log("");
         }
         else {
-            if(numberOfInputs > 200) {
+            if(numberOfNamesInserted > 200) {
                 console.log("Can't add more names.");
             }
             else {
@@ -43,8 +44,8 @@ function main() {
                 let arrayOfFirstAndLastName: string[] = name.split(" ", 2);
                 try {
                     arrayOfStudents.push(new Student(
-                        numberOfInputs, arrayOfFirstAndLastName[0], arrayOfFirstAndLastName[1]));
-                    numberOfInputs++;
+                        numberOfNamesInserted, arrayOfFirstAndLastName[0], arrayOfFirstAndLastName[1]));
+                    numberOfNamesInserted++;
                 }
                 catch(e) {
                     // In case of invalid user input
