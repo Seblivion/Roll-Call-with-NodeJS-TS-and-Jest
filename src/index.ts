@@ -1,5 +1,3 @@
-import * as readline from 'readline';
-
 import {CitizenListManager} from "./classes/CitizenListManager";
 import {Student} from "./classes/Student";
 
