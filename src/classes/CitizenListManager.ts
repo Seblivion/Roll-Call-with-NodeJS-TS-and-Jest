@@ -11,7 +11,7 @@ export class CitizenListManager {
     
     constructor(arrayOfCitizens: ICitizen[] = []) {
         if(arrayOfCitizens.length == 0) {
-            console.log("CitizenListManager: Warning: There were no people added to the list.");
+            console.log("Warning: There were no people added to the list.");
         }
         this.arrayOfCitizens = arrayOfCitizens;
     }

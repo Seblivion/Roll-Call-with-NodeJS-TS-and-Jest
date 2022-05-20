@@ -21,7 +21,7 @@ function main() {
             let citizenListManager = new CitizenListManager(arrayOfStudents);
             let rollCallList: string[] = citizenListManager.rollCall();
             console.log("");
-            console.log("*********** Roll call list: ***********");
+            console.log("*********** Roll call list ***********");
             rollCallList.forEach((name) => {
                 console.log(name);
             });

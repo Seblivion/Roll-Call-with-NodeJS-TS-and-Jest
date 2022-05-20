@@ -39,7 +39,7 @@ describe("This is testing ground for the Student class", () => {
     });
 
     it("Testing error on uppercase after first character", () => {
-        expect(() => { new Student(1, "GRIM", "Reaper"); }).toThrow(Error);
+        expect(() => { new Student(1, "Ulfric", "StormCloak"); }).toThrow(Error);
     });
 
 });
