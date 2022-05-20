@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1652998670625" clover="3.2.0">
-  <project timestamp="1652998670626" name="All files">
+<coverage generated="1653033230430" clover="3.2.0">
+  <project timestamp="1653033230430" name="All files">
     <metrics statements="102" coveredstatements="88" conditionals="41" coveredconditionals="33" methods="36" coveredmethods="30" elements="179" coveredelements="151" complexity="0" loc="102" ncloc="102" packages="2" files="4" classes="4"/>
     <package name="dist.classes">
       <metrics statements="53" coveredstatements="46" conditionals="22" coveredconditionals="18" methods="18" coveredmethods="15"/>
@@ -41,16 +41,16 @@
       </file>
       <file name="Student.js" path="C:\Programming Projects\NodeJS\Roll Call\dist\classes\Student.js">
         <metrics statements="21" coveredstatements="15" conditionals="11" coveredconditionals="9" methods="9" coveredmethods="6"/>
-        <line num="2" count="1" type="stmt"/>
-        <line num="3" count="1" type="stmt"/>
-        <line num="11" count="81" type="cond" truecount="4" falsecount="0"/>
-        <line num="12" count="6" type="stmt"/>
-        <line num="14" count="75" type="stmt"/>
-        <line num="15" count="75" type="stmt"/>
-        <line num="16" count="75" type="stmt"/>
+        <line num="2" count="2" type="stmt"/>
+        <line num="3" count="2" type="stmt"/>
+        <line num="11" count="88" type="cond" truecount="4" falsecount="0"/>
+        <line num="12" count="12" type="stmt"/>
+        <line num="14" count="76" type="stmt"/>
+        <line num="15" count="76" type="stmt"/>
+        <line num="16" count="76" type="stmt"/>
         <line num="19" count="20" type="stmt"/>
         <line num="22" count="10" type="stmt"/>
-        <line num="25" count="93" type="stmt"/>
+        <line num="25" count="94" type="stmt"/>
         <line num="28" count="70" type="stmt"/>
         <line num="31" count="0" type="stmt"/>
         <line num="34" count="0" type="stmt"/>
@@ -58,10 +58,10 @@
         <line num="38" count="0" type="cond" truecount="0" falsecount="2"/>
         <line num="39" count="0" type="stmt"/>
         <line num="41" count="0" type="stmt"/>
-        <line num="45" count="160" type="cond" truecount="5" falsecount="0"/>
-        <line num="46" count="6" type="stmt"/>
-        <line num="48" count="154" type="stmt"/>
-        <line num="51" count="1" type="stmt"/>
+        <line num="49" count="172" type="cond" truecount="5" falsecount="0"/>
+        <line num="50" count="12" type="stmt"/>
+        <line num="52" count="160" type="stmt"/>
+        <line num="55" count="2" type="stmt"/>
       </file>
     </package>
     <package name="src.classes">
@@ -69,9 +69,9 @@
       <file name="CitizenListManager.ts" path="C:\Programming Projects\NodeJS\Roll Call\src\classes\CitizenListManager.ts">
         <metrics statements="30" coveredstatements="29" conditionals="10" coveredconditionals="8" methods="9" coveredmethods="9"/>
         <line num="3" count="1" type="stmt"/>
-        <line num="13" count="13" type="cond" truecount="0" falsecount="1"/>
+        <line num="13" count="6" type="cond" truecount="0" falsecount="1"/>
         <line num="14" count="0" type="stmt"/>
-        <line num="16" count="13" type="stmt"/>
+        <line num="16" count="6" type="stmt"/>
         <line num="24" count="4" type="stmt"/>
         <line num="25" count="4" type="stmt"/>
         <line num="26" count="20" type="stmt"/>
@@ -101,12 +101,12 @@
       </file>
       <file name="Student.ts" path="C:\Programming Projects\NodeJS\Roll Call\src\classes\Student.ts">
         <metrics statements="19" coveredstatements="13" conditionals="9" coveredconditionals="7" methods="9" coveredmethods="6"/>
-        <line num="7" count="1" type="stmt"/>
-        <line num="18" count="81" type="cond" truecount="3" falsecount="0"/>
+        <line num="7" count="2" type="stmt"/>
+        <line num="18" count="39" type="cond" truecount="3" falsecount="0"/>
         <line num="19" count="6" type="stmt"/>
-        <line num="21" count="75" type="stmt"/>
-        <line num="22" count="75" type="stmt"/>
-        <line num="23" count="75" type="stmt"/>
+        <line num="21" count="33" type="stmt"/>
+        <line num="22" count="33" type="stmt"/>
+        <line num="23" count="33" type="stmt"/>
         <line num="27" count="20" type="stmt"/>
         <line num="31" count="10" type="stmt"/>
         <line num="35" count="93" type="stmt"/>
@@ -117,9 +117,9 @@
         <line num="52" count="0" type="cond" truecount="0" falsecount="2"/>
         <line num="53" count="0" type="stmt"/>
         <line num="55" count="0" type="stmt"/>
-        <line num="61" count="160" type="cond" truecount="4" falsecount="0"/>
-        <line num="62" count="6" type="stmt"/>
-        <line num="64" count="154" type="stmt"/>
+        <line num="65" count="76" type="cond" truecount="4" falsecount="0"/>
+        <line num="66" count="6" type="stmt"/>
+        <line num="68" count="70" type="stmt"/>
       </file>
     </package>
   </project>
